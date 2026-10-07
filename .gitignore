@@ -20,7 +20,7 @@ mlruns/
 .dvc/cache/
 
 # Data
-data/raw/*
+data/raw/*.csv
 data/interim/*
 data/processed/*
 
