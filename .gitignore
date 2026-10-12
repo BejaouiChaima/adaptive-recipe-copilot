@@ -22,7 +22,7 @@ mlruns/
 # Data
 data/raw/*.csv
 data/interim/*
-data/processed/*
+data/processed/*.csv
 
 # Models
 models/*
