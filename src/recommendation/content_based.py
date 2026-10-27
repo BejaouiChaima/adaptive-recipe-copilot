@@ -175,42 +175,34 @@ def recall_at_k(relevant, total_relevant, k):
     return np.sum(relevant[:k]) / total_relevant
 
 
-def average_precision_at_k(relevant, k):
+def average_precision_at_k(relevant, total_relevant, k):
     relevant = np.asarray(relevant[:k], dtype=int)
 
-    if relevant.sum() == 0:
-        return 0.0
+    if total_relevant == 0:
+        return np.nan
 
-    precisions = [
-        relevant[i] * relevant[: i + 1].sum() / (i + 1)
-        for i in range(len(relevant))
-    ]
-
-    return np.sum(precisions) / min(
-        int(relevant.sum()), k
+    precision = (
+        np.cumsum(relevant)
+        / np.arange(1, len(relevant) + 1)
     )
 
+    return np.sum(precision * relevant) / min(total_relevant, k)
 
-def ndcg_at_k(relevant, k):
+
+def ndcg_at_k(relevant, total_relevant, k):
     relevant = np.asarray(relevant[:k], dtype=float)
 
-    discounts = np.log2(
-        np.arange(2, len(relevant) + 2)
-    )
+    if total_relevant == 0:
+        return np.nan
 
+    discounts = np.log2(np.arange(2, len(relevant) + 2))
     dcg = np.sum(relevant / discounts)
 
-    ideal_length = min(int(relevant.sum()), k)
+    ideal_length = min(total_relevant, k)
+    ideal_discounts = np.log2(np.arange(2, ideal_length + 2))
+    idcg = np.sum(1 / ideal_discounts)
 
-    if ideal_length == 0:
-        return 0.0
-
-    ideal = np.sum(
-        np.ones(ideal_length)
-        / np.log2(np.arange(2, ideal_length + 2))
-    )
-
-    return dcg / ideal
+    return dcg / idcg if idcg > 0 else 0.0
 
 
 # ============================================================
@@ -328,12 +320,12 @@ def evaluate_model(df):
 
         metric_results["MAP@10"].append(
             average_precision_at_k(
-                relevant_at_k, TOP_K
+                relevant_at_k, total_relevant, TOP_K
             )
         )
 
         metric_results["NDCG@10"].append(
-            ndcg_at_k(relevant_at_k, TOP_K)
+            ndcg_at_k(relevant_at_k, total_relevant, TOP_K)
         )
 
         valid_queries += 1
@@ -414,7 +406,7 @@ def recommend_by_name(
         return pd.DataFrame()
 
     recipe = matches.iloc[0]
-    recipe_index = recipe.name
+    recipe_index = df.index.get_loc(recipe.name)
 
     print("\nRecette recherchée :", recipe["Name"])
     print("Catégorie :", recipe["RecipeCategory"])
