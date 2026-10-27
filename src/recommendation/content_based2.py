@@ -485,3 +485,4 @@ if __name__ == "__main__":
         print(
             recommendations.to_string(index=False)
         )
+
