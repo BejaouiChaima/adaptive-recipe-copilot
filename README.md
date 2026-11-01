@@ -100,3 +100,41 @@ checkpoint.
   n'est écrit, le checkpoint reste sur la dernière ligne terminée.
 - 3 lots consécutifs en échec : arrêt du run (quota épuisé ou service HS).
 - Ctrl+C : les lots déjà terminés sont écrits avant l'arrêt.
+
+## Analyse de sentiment — approche NLP (sans API)
+
+Le notebook `NLP/01_sentiment_nlp.ipynb` reproduit la même classification avec
+des méthodes NLP classiques, gratuites et locales :
+
+1. **VADER** — lexique de sentiment (règles, négations, intensificateurs).
+2. **TF-IDF + régression logistique** — modèle supervisé entraîné sur les notes.
+
+| | Entrée | Sortie |
+|---|---|---|
+| Fichier | `data/processed/reviews_for_llm.csv` | `data/processed/reviews_nlp_sentiment.csv` |
+| Colonnes | `ReviewId, Review, Rating` | `ReviewId, Review, Rating, Sentiment` |
+
+Le format de `Sentiment` est identique au pipeline LLM (`1` / `0` / `-1`), les
+deux fichiers se joignent donc sur `ReviewId`.
+
+```powershell
+pip install vaderSentiment
+python -m jupyter notebook NLP/01_sentiment_nlp.ipynb
+```
+
+Le traitement est incrémental (checkpoint `nlp_sentiment_checkpoint.json`) :
+un notebook interrompu reprend à la ligne suivante. Pour tester sur un
+échantillon :
+
+```powershell
+$env:NB_ROW_LIMIT="20000"
+python -m jupyter notebook NLP/01_sentiment_nlp.ipynb
+```
+
+Résultats mesurés sur 3 000 avis :
+
+| Méthode | Métrique |
+|---|---|
+| VADER vs note | 87,4 % d'accord |
+| TF-IDF + LogReg (200 k avis) | 96,2 % d'accuracy |
+| VADER vs LLM | 90,7 % d'accord |
