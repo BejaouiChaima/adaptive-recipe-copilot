@@ -1,0 +1,7 @@
+Model,UsersEvaluated,UsersWithHit,TotalHits,Precision@K,Recall@K,F1@K,NDCG@K,N_Likes,N_Test
+Content-Based TF-IDF,50,0,0,0.0,0.0,0.0,0.0,3,3
+Content-Based + SVD,50,0,0,0.0,0.0,0.0,0.0,3,3
+Content-Based TF-IDF,50,0,0,0.0,0.0,0.0,0.0,5,5
+Content-Based + SVD,50,0,0,0.0,0.0,0.0,0.0,5,5
+Content-Based TF-IDF,50,0,0,0.0,0.0,0.0,0.0,8,5
+Content-Based + SVD,50,0,0,0.0,0.0,0.0,0.0,8,5
