@@ -1,0 +1,29 @@
+/* ============================================================
+   APP-SPECIFIC OVERRIDES
+   Main design system is defined in index.css.
+   ============================================================ */
+
+#root {
+  isolation: isolate;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.recipe-card,
+.taste-card,
+.taste-personalized-card {
+  min-width: 0;
+}
