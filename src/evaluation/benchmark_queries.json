@@ -1,0 +1,258 @@
+
+[
+  {
+    "id": "Q01",
+    "query": "I have chicken and rice. I want an easy meal ready in less than 40 minutes.",
+    "wanted_ingredients": ["chicken", "rice"],
+    "avoided_ingredients": [],
+    "max_time": 40,
+    "max_calories": 600
+  },
+  {
+    "id": "Q02",
+    "query": "I would like to cook pasta with tomatoes and cheese.",
+    "wanted_ingredients": ["pasta", "tomatoes", "cheese"],
+    "avoided_ingredients": [],
+    "max_time": 30,
+    "max_calories": 550
+  },
+  {
+    "id": "Q03",
+    "query": "I have eggs, potatoes and onions. What can I make quickly?",
+    "wanted_ingredients": ["eggs", "potatoes", "onions"],
+    "avoided_ingredients": [],
+    "max_time": 25,
+    "max_calories": 500
+  },
+  {
+    "id": "Q04",
+    "query": "I want a meal with tuna and pasta, but no mayonnaise.",
+    "wanted_ingredients": ["tuna", "pasta"],
+    "avoided_ingredients": ["mayonnaise"],
+    "max_time": 30,
+    "max_calories": 500
+  },
+  {
+    "id": "Q05",
+    "query": "I have chicken, mushrooms and garlic. I need something under 30 minutes.",
+    "wanted_ingredients": ["chicken", "mushrooms", "garlic"],
+    "avoided_ingredients": [],
+    "max_time": 30,
+    "max_calories": 500
+  },
+  {
+    "id": "Q06",
+    "query": "Can you suggest a vegetarian meal with beans and tomatoes?",
+    "wanted_ingredients": ["beans", "tomatoes"],
+    "avoided_ingredients": ["meat", "chicken"],
+    "max_time": 45,
+    "max_calories": 500
+  },
+  {
+    "id": "Q07",
+    "query": "I want a recipe using salmon and lemon, without butter.",
+    "wanted_ingredients": ["salmon", "lemon"],
+    "avoided_ingredients": ["butter"],
+    "max_time": 35,
+    "max_calories": 550
+  },
+  {
+    "id": "Q08",
+    "query": "I have carrots, potatoes and lentils. I want a healthy meal.",
+    "wanted_ingredients": ["carrots", "potatoes", "lentils"],
+    "avoided_ingredients": [],
+    "max_time": 45,
+    "max_calories": 450
+  },
+  {
+    "id": "Q09",
+    "query": "I need a quick breakfast with eggs and cheese.",
+    "wanted_ingredients": ["eggs", "cheese"],
+    "avoided_ingredients": [],
+    "max_time": 15,
+    "max_calories": 350
+  },
+  {
+    "id": "Q10",
+    "query": "I want to prepare a salad with cucumber, tomatoes and lettuce.",
+    "wanted_ingredients": ["cucumber", "tomatoes", "lettuce"],
+    "avoided_ingredients": [],
+    "max_time": 15,
+    "max_calories": 300
+  },
+  {
+    "id": "Q11",
+    "query": "I have ground beef and onions. I want a simple dinner.",
+    "wanted_ingredients": ["ground beef", "onions"],
+    "avoided_ingredients": [],
+    "max_time": 40,
+    "max_calories": 600
+  },
+  {
+    "id": "Q12",
+    "query": "I want a recipe with shrimp and garlic, but no dairy products.",
+    "wanted_ingredients": ["shrimp", "garlic"],
+    "avoided_ingredients": ["milk", "cheese", "cream", "butter"],
+    "max_time": 30,
+    "max_calories": 500
+  },
+  {
+    "id": "Q13",
+    "query": "I have broccoli, carrots and chicken. I want a light meal.",
+    "wanted_ingredients": ["broccoli", "carrots", "chicken"],
+    "avoided_ingredients": [],
+    "max_time": 35,
+    "max_calories": 400
+  },
+  {
+    "id": "Q14",
+    "query": "I want to prepare something with apples and oats, under 300 calories.",
+    "wanted_ingredients": ["apples", "oats"],
+    "avoided_ingredients": [],
+    "max_time": 25,
+    "max_calories": 300
+  },
+  {
+    "id": "Q15",
+    "query": "I have rice, peas and carrots. I need a simple meal without eggs.",
+    "wanted_ingredients": ["rice", "peas", "carrots"],
+    "avoided_ingredients": ["eggs"],
+    "max_time": 30,
+    "max_calories": 450
+  },
+  {
+    "id": "Q16",
+    "scenario": "dessert",
+    "query": "I have chocolate, flour, butter and eggs. I want to bake homemade chocolate cookies.",
+    "wanted_ingredients": ["chocolate", "flour", "butter", "eggs"],
+    "avoided_ingredients": [],
+    "max_time": 45,
+    "max_calories": 500
+  },
+  {
+    "id": "Q17",
+    "scenario": "sweet_breakfast",
+    "query": "I want a warm breakfast with apples, oats, cinnamon and honey.",
+    "wanted_ingredients": ["apples", "oats", "cinnamon", "honey"],
+    "avoided_ingredients": [],
+    "max_time": 25,
+    "max_calories": 400
+  },
+  {
+    "id": "Q18",
+    "scenario": "breakfast",
+    "query": "I have bananas, eggs, milk and flour. Can you suggest homemade pancakes?",
+    "wanted_ingredients": ["bananas", "eggs", "milk", "flour"],
+    "avoided_ingredients": [],
+    "max_time": 30,
+    "max_calories": 500
+  },
+  {
+    "id": "Q19",
+    "scenario": "smoothie",
+    "query": "I want a refreshing smoothie with strawberries, bananas, yogurt and honey.",
+    "wanted_ingredients": ["strawberries", "bananas", "yogurt", "honey"],
+    "avoided_ingredients": [],
+    "max_time": 10,
+    "max_calories": 350
+  },
+  {
+    "id": "Q20",
+    "scenario": "beverage",
+    "query": "I have lemons, mint and honey. I want to prepare a refreshing homemade drink.",
+    "wanted_ingredients": ["lemons", "mint", "honey"],
+    "avoided_ingredients": [],
+    "max_time": 15,
+    "max_calories": 150
+  },
+  {
+    "id": "Q21",
+    "scenario": "appetizer",
+    "query": "I want to make homemade hummus with chickpeas, tahini, garlic and lemon juice.",
+    "wanted_ingredients": ["chickpeas", "tahini", "garlic", "lemon juice"],
+    "avoided_ingredients": [],
+    "max_time": 20,
+    "max_calories": 350
+  },
+  {
+    "id": "Q22",
+    "scenario": "salad",
+    "query": "I want a fresh salad with quinoa, cucumber, tomatoes, feta cheese and lemon.",
+    "wanted_ingredients": ["quinoa", "cucumber", "tomatoes", "feta cheese", "lemon"],
+    "avoided_ingredients": [],
+    "max_time": 30,
+    "max_calories": 500
+  },
+  {
+    "id": "Q23",
+    "scenario": "soup",
+    "query": "I have lentils, carrots, celery, tomatoes and onions. I want a nutritious homemade soup.",
+    "wanted_ingredients": ["lentils", "carrots", "celery", "tomatoes", "onions"],
+    "avoided_ingredients": [],
+    "max_time": 60,
+    "max_calories": 450
+  },
+  {
+    "id": "Q24",
+    "scenario": "vegetarian",
+    "query": "I want a vegetarian stir-fry with tofu, broccoli, mushrooms, garlic and soy sauce.",
+    "wanted_ingredients": ["tofu", "broccoli", "mushrooms", "garlic", "soy sauce"],
+    "avoided_ingredients": ["chicken", "beef", "pork"],
+    "max_time": 35,
+    "max_calories": 500
+  },
+  {
+    "id": "Q25",
+    "scenario": "main_dish",
+    "query": "I have ground turkey, bell peppers, onions and rice. I want an easy complete dinner.",
+    "wanted_ingredients": ["ground turkey", "bell peppers", "onions", "rice"],
+    "avoided_ingredients": [],
+    "max_time": 45,
+    "max_calories": 600
+  },
+  {
+    "id": "Q26",
+    "scenario": "seafood",
+    "query": "I want to prepare salmon with lemon, garlic, dill and asparagus.",
+    "wanted_ingredients": ["salmon", "lemon", "garlic", "dill", "asparagus"],
+    "avoided_ingredients": [],
+    "max_time": 40,
+    "max_calories": 550
+  },
+  {
+    "id": "Q27",
+    "scenario": "seafood_curry",
+    "query": "I want a flavorful shrimp curry with coconut milk, curry powder and rice.",
+    "wanted_ingredients": ["shrimp", "coconut milk", "curry powder", "rice"],
+    "avoided_ingredients": [],
+    "max_time": 45,
+    "max_calories": 650
+  },
+  {
+    "id": "Q28",
+    "scenario": "spicy_vegetarian",
+    "query": "I want a spicy vegetarian meal with black beans, corn, jalapeno peppers, tomatoes and avocado.",
+    "wanted_ingredients": ["black beans", "corn", "jalapeno peppers", "tomatoes", "avocado"],
+    "avoided_ingredients": [],
+    "max_time": 35,
+    "max_calories": 500
+  },
+  {
+    "id": "Q29",
+    "scenario": "baking",
+    "query": "I have ripe bananas, flour, eggs and walnuts. I want to bake homemade banana bread.",
+    "wanted_ingredients": ["bananas", "flour", "eggs", "walnuts"],
+    "avoided_ingredients": [],
+    "max_time": 90,
+    "max_calories": 450
+  },
+  {
+    "id": "Q30",
+    "scenario": "sauce",
+    "query": "I want to make homemade pesto with fresh basil, pine nuts, parmesan, garlic and olive oil.",
+    "wanted_ingredients": ["basil", "pine nuts", "parmesan", "garlic", "olive oil"],
+    "avoided_ingredients": [],
+    "max_time": 20,
+    "max_calories": 300
+  }
+]

@@ -38,3 +38,13 @@ Thumbs.db
 
 # Python cache
 .pytest_cache/
+
+
+# Generated evaluation CSV files
+evaluation_logs/*.csv
+tests/*.csv
+tests/**/*_results.csv
+tests/evaluation_results/*.csv
+src/evaluation/*.csv
+src/evaluation/results/*.csv
+src/evaluation/results_feedback/*.csv
