@@ -1,0 +1,5 @@
+outs:
+- md5: ff6ed50a866782d0d4dc79506d338301
+  size: 105473417
+  hash: md5
+  path: content_based_eval.pkl

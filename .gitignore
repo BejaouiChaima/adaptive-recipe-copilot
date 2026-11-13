@@ -25,7 +25,8 @@ data/interim/*
 data/processed/*
 
 # Models
-models/*
+models/*.pkl
+models/*.joblib
 
 # OS
 .DS_Store
